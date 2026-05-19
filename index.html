@@ -4,16 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Климово - Деревенское молоко</title>
-    <meta name="description" content="Ферма Климово - натуральная молочная продукция ручной работы из Старицкого района Тверской области. Молоко жирностью 4.5%, творог, сыр, сметана, масло без химии.">
-    <meta name="keywords" content="ферма, молоко, творог, сыр, сметана, масло, Климово, Старицкий район, Тверь, Старица">
+    <meta name="description" content="Ферма Климово - натуральная молочная продукция ручной работы из Старицкого района Тверской области.">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Ферма Климово - Натуральная молочная продукция">
-    <meta property="og:description" content="Настоящее деревенское молоко из Старицкого района. Ручная работа, без химии.">
-    <meta property="og:url" content="https://shuhsukin.github.io/klimovo-landing/">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐄</text></svg>">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +19,6 @@
             --light-grey: #E5E5E5;
             --accent: #FF3B30;
             --blue: #2563EB;
-            --blue-dark: #1E40AF;
             --purple: #7C3AED;
         }
 
@@ -97,6 +88,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            width: 100%;
         }
 
         .hero-logo {
@@ -106,26 +98,49 @@
             line-height: 0.9;
             text-transform: uppercase;
             margin-bottom: 30px;
-            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1);
+            min-height: 1.2em;
         }
 
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .hero-logo .typed {
+            display: inline;
+        }
+
+        .hero-logo .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 0.85em;
+            background: var(--white);
+            margin-left: 8px;
+            animation: blink 0.8s infinite;
+            vertical-align: -10px;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
         }
 
         .hero-subtitle {
             font-size: clamp(1.2rem, 3vw, 2rem);
             font-weight: 400;
-            opacity: 0.6;
+            opacity: 0.8;
             margin-bottom: 60px;
-            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+            min-height: 3em;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .hero-subtitle .typed-text {
+            display: inline;
+        }
+
+        .hero-subtitle .sub-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background: rgba(255, 255, 255, 0.85);
+            margin-left: 4px;
+            animation: blink 0.8s infinite;
+            vertical-align: -3px;
         }
 
         .hero-stats {
@@ -135,7 +150,6 @@
             margin-top: 80px;
             padding-top: 40px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
         }
 
         .stat {
@@ -185,11 +199,10 @@
             background: var(--white);
             padding: 60px 40px;
             transition: all 0.3s ease;
-            cursor: default;
         }
 
         .product:hover {
-            background: var(--black);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: var(--white);
         }
 
@@ -253,7 +266,6 @@
         }
 
         .input-group {
-            position: relative;
             margin-bottom: 20px;
         }
 
@@ -300,10 +312,6 @@
             transform: translateY(-2px);
         }
 
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
         .form-success {
             display: none;
             padding: 30px;
@@ -313,7 +321,7 @@
             margin-top: 20px;
         }
 
-        .telegram-link {
+        .telegram-link-cta {
             display: inline-flex;
             align-items: center;
             gap: 12px;
@@ -327,7 +335,7 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
-        .telegram-link:hover {
+        .telegram-link-cta:hover {
             background: rgba(255,255,255,0.2);
             transform: translateY(-2px);
         }
@@ -407,41 +415,6 @@
             font-size: 0.9rem;
         }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 30px;
-            height: 50px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 20px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding-top: 8px;
-            animation: fadeIn 1s ease 1s backwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .scroll-indicator::after {
-            content: '';
-            width: 4px;
-            height: 8px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 2px;
-            animation: scroll 2s ease infinite;
-        }
-
-        @keyframes scroll {
-            0%, 100% { transform: translateY(0); opacity: 1; }
-            50% { transform: translateY(12px); opacity: 0.3; }
-        }
-
         .gallery-section {
             background: var(--white);
         }
@@ -498,16 +471,10 @@
             font-size: 0.85rem;
             font-weight: 700;
             z-index: 10000;
-            animation: pulse 2s ease infinite;
         }
 
         .admin-indicator.active {
             display: block;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
         }
 
         .gallery-grid {
@@ -547,20 +514,21 @@
             gap: 20px;
             padding: 30px;
             text-align: center;
-            background: linear-gradient(135deg, var(--light-grey), #d0d0d0);
+            background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+            color: var(--white);
         }
 
         .placeholder-icon {
-            font-size: 4rem;
-            opacity: 0.3;
+            font-size: 5rem;
+            opacity: 0.7;
         }
 
         .placeholder-text {
             font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            opacity: 0.5;
+            opacity: 0.9;
         }
 
         .modal {
@@ -574,7 +542,6 @@
             z-index: 9999;
             align-items: center;
             justify-content: center;
-            animation: fadeIn 0.3s ease;
         }
 
         .modal.active {
@@ -603,49 +570,43 @@
             cursor: pointer;
             z-index: 10000;
             line-height: 1;
-            transition: transform 0.2s ease;
         }
 
-        .modal-close:hover {
-            transform: rotate(90deg);
-        }
-
-        .modal-nav {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
+        .telegram-promo {
+            margin: 80px 0;
             display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-            transform: translateY(-50%);
-            pointer-events: none;
+            justify-content: center;
         }
 
-        .modal-nav-btn {
-            pointer-events: all;
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+        .telegram-link-gallery {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 32px 48px;
+            background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
             color: var(--white);
-            font-size: 2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            text-decoration: none;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
         }
 
-        .modal-nav-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .telegram-link-gallery:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
             border-color: var(--white);
         }
 
-        .gallery-empty {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 100px 20px;
-            font-size: 1.2rem;
-            opacity: 0.5;
+        .telegram-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+
+        .telegram-desc {
+            font-size: 0.95rem;
+            opacity: 0.8;
         }
 
         .reviews-section {
@@ -673,23 +634,10 @@
             position: relative;
         }
 
-        .review-card::before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 6rem;
-            font-family: 'Bitter', serif;
-            opacity: 0.1;
-            line-height: 1;
-        }
-
         .review-text {
             font-size: 1.1rem;
             line-height: 1.7;
             margin-bottom: 30px;
-            position: relative;
-            z-index: 1;
         }
 
         .review-author {
@@ -700,70 +648,13 @@
             opacity: 0.6;
         }
 
-        .telegram-promo {
-            margin: 80px 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .telegram-link-gallery {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            padding: 32px 48px;
-            background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 0;
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-        }
-
-        .telegram-link-gallery:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
-            border-color: var(--white);
-        }
-
-        .telegram-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 4px;
-        }
-
-        .telegram-desc {
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
-
         @media (max-width: 768px) {
-            .hero {
-                padding: 40px 20px;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-
-            .section {
-                padding: 80px 20px;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .values-list li {
-                padding-left: 60px;
-            }
+            .hero { padding: 40px 20px; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .section { padding: 80px 20px; }
+            .about-grid { grid-template-columns: 1fr; gap: 60px; }
+            .products-grid { grid-template-columns: 1fr; }
+            .values-list li { padding-left: 60px; }
         }
     </style>
 </head>
@@ -772,8 +663,8 @@
 
     <section class="hero">
         <div class="container">
-            <h1 class="hero-logo">КЛИМОВО</h1>
-            <p class="hero-subtitle">Настоящее деревенское молоко из Старицкого района</p>
+            <h1 class="hero-logo"><span class="typed" id="heroTyped"></span><span class="cursor" id="heroCursor"></span></h1>
+            <p class="hero-subtitle"><span class="typed-text" id="subTyped"></span><span class="sub-cursor" id="subCursor" style="display: none;"></span></p>
             
             <div class="hero-stats">
                 <div class="stat">
@@ -794,7 +685,6 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator"></div>
     </section>
 
     <section class="section products">
@@ -820,6 +710,10 @@
                 <div class="product">
                     <h3 class="product-name">Сыр</h3>
                     <p class="product-desc">Как адыгейский, только вкуснее</p>
+                </div>
+                <div class="product">
+                    <h3 class="product-name">Топлёное масло</h3>
+                    <p class="product-desc">Золотистое, ароматное, по бабушкиному рецепту</p>
                 </div>
             </div>
         </div>
@@ -858,28 +752,19 @@
 
     <section class="section gallery-section">
         <div class="container">
-            <h2 class="section-title">Галерея</h2>
+            <h2 class="section-title" id="galleryTitle">Галерея</h2>
             <div class="gallery-controls" id="galleryControls">
                 <input type="file" id="imageUpload" accept="image/*,video/*" multiple style="display: none;">
-                <button class="upload-btn" onclick="document.getElementById('imageUpload').click()">
-                    + Загрузить фото/видео
-                </button>
+                <button class="upload-btn" onclick="document.getElementById('imageUpload').click()">+ Загрузить фото/видео</button>
                 <button class="clear-btn" onclick="clearGallery()">Очистить галерею</button>
             </div>
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Галерея заполняется динамически -->
-            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
 
-            <!-- Модальное окно -->
-            <div class="modal" id="imageModal">
+            <div class="modal" id="imageModal" onclick="closeModal(event)">
                 <div class="modal-close" onclick="closeModal()">&times;</div>
                 <div class="modal-content">
                     <img id="modalImage" src="" alt="">
                     <video id="modalVideo" controls style="display: none;"></video>
-                </div>
-                <div class="modal-nav">
-                    <button class="modal-nav-btn" onclick="navigateModal(-1)">←</button>
-                    <button class="modal-nav-btn" onclick="navigateModal(1)">→</button>
                 </div>
             </div>
 
@@ -889,8 +774,8 @@
                         <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.121.099.155.232.171.325.016.093.036.305.02.471z"/>
                     </svg>
                     <div>
-                        <div class="telegram-title">Подписывайтесь на наш Telegram</div>
-                        <div class="telegram-desc">Фото, видео, новости фермы каждый день</div>
+                        <div class="telegram-title">Больше фото в Telegram</div>
+                        <div class="telegram-desc">@KlimovoZ — наш канал</div>
                     </div>
                 </a>
             </div>
@@ -923,28 +808,328 @@
             <div class="form-container">
                 <form id="orderForm">
                     <div class="input-group">
-                        <input 
-                            type="tel" 
-                            class="input-field" 
-                            id="phone"
-                            placeholder="+7 (___) ___-__-__"
-                            required
-                        >
+                        <input type="tel" class="input-field" id="phone" placeholder="+7 (___) ___-__-__" required>
                     </div>
                     <div class="input-group">
-                        <input 
-                            type="text" 
-                            class="input-field" 
-                            id="name"
-                            placeholder="Ваше имя"
-                            required
-                        >
+                        <input type="text" class="input-field" id="name" placeholder="Ваше имя" required>
                     </div>
                     <button type="submit" class="submit-btn">Оставить заявку</button>
                 </form>
-                <div class="form-success" id="successMessage">
-                    ✓ Спасибо! Мы свяжемся с вами в ближайшее время
-                </div>
+                <div class="form-success" id="successMessage">✓ Спасибо! Мы свяжемся с вами в ближайшее время</div>
 
-                <a href="https://t.me/KlimovoZ" target="_blank" class="telegram-link">
-                    <svg width="24" height="24
+                <a href="https://t.me/KlimovoZ" target="_blank" class="telegram-link-cta">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.121.099.155.232.171.325.016.093.036.305.02.471z"/>
+                    </svg>
+                    Наш Telegram-канал
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Деревня Климово, Старицкий район, Тверская область</p>
+        </div>
+    </footer>
+
+    <script>
+        // ============ ЭФФЕКТ ПЕЧАТАНИЯ ============
+        
+        // Печатаем "КЛИМОВО" один раз
+        function typeLogoOnce() {
+            const target = document.getElementById('heroTyped');
+            const cursor = document.getElementById('heroCursor');
+            const subCursor = document.getElementById('subCursor');
+            const text = 'КЛИМОВО';
+            let i = 0;
+            
+            function step() {
+                if (i < text.length) {
+                    target.textContent += text[i];
+                    i++;
+                    setTimeout(step, 150);
+                } else {
+                    // После окончания печатания логотипа - убираем курсор и запускаем подзаголовок
+                    setTimeout(() => {
+                        cursor.style.display = 'none';
+                        subCursor.style.display = 'inline-block';
+                        typeSubtitleLoop();
+                    }, 500);
+                }
+            }
+            
+            step();
+        }
+        
+        // Циклическое печатание подзаголовка
+        const phrases = [
+            'Вкуснейшее молоко из Старицкого района',
+            'Творог посуше или повлажнее',
+            'Сметана как в детстве у бабушки',
+            'Сыр как адыгейский, только вкуснее'
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeSubtitleLoop() {
+            const target = document.getElementById('subTyped');
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                target.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                target.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let speed = isDeleting ? 30 : 70;
+            
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                speed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                speed = 500;
+            }
+            
+            setTimeout(typeSubtitleLoop, speed);
+        }
+        
+        // ============ ГАЛЕРЕЯ ============
+        
+        let galleryItems = [];
+        let currentModalIndex = 0;
+        let adminMode = false;
+        
+        // Фотографии из папки images/ (видны всем посетителям)
+        const farmPhotos = [
+            { src: 'images/1-sheep.jpg', type: 'image', caption: 'Наши овцы' },
+            { src: 'images/2-cow-99.jpg', type: 'image', caption: 'Корова №99' },
+            { src: 'images/3-cow-red.jpg', type: 'image', caption: 'Бурёнка' },
+            { src: 'images/4-cows-grazing.jpg', type: 'image', caption: 'На пастбище' },
+            { src: 'images/5-dew.jpg', type: 'image', caption: 'Роса утром' },
+            { src: 'images/6-stars.jpg', type: 'image', caption: 'Звёздное небо Старицы' }
+        ];
+        
+        // Дефолтные плейсхолдеры (на случай если фото не загрузятся)
+        const defaultGallery = [
+            { icon: '🐑', text: 'Наши овцы' },
+            { icon: '🐄', text: 'Корова №99' },
+            { icon: '🐮', text: 'Бурёнка' },
+            { icon: '🌾', text: 'На пастбище' },
+            { icon: '💧', text: 'Роса утром' },
+            { icon: '✨', text: 'Звёздное небо' }
+        ];
+        
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            
+            // Собираем все фото: сначала из farmPhotos, потом загруженные через админку
+            const allPhotos = [...farmPhotos, ...galleryItems];
+            
+            if (allPhotos.length === 0) {
+                grid.innerHTML = defaultGallery.map(item => `
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <div class="placeholder-icon">${item.icon}</div>
+                            <div class="placeholder-text">${item.text}</div>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                grid.innerHTML = allPhotos.map((item, index) => {
+                    const fallback = defaultGallery[index] || { icon: '📷', text: 'Фото' };
+                    return `
+                    <div class="gallery-item" onclick="openModal(${index})">
+                        ${item.type === 'video' 
+                            ? `<video src="${item.src}" muted></video>`
+                            : `<img src="${item.src}" alt="${item.caption || 'Фото'}" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;gallery-placeholder&quot;><div class=&quot;placeholder-icon&quot;>${fallback.icon}</div><div class=&quot;placeholder-text&quot;>${fallback.text}</div></div>'">`
+                        }
+                    </div>
+                `}).join('');
+            }
+        }
+        
+        // Объединяем все фото для модалки
+        function getAllPhotos() {
+            return [...farmPhotos, ...galleryItems];
+        }
+        
+        // Загрузка файлов
+        document.getElementById('imageUpload').addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    galleryItems.push({
+                        src: event.target.result,
+                        type: file.type.startsWith('video') ? 'video' : 'image'
+                    });
+                    saveGalleryToStorage();
+                    renderGallery();
+                };
+                reader.readAsDataURL(file);
+            });
+            
+            e.target.value = '';
+        });
+        
+        function openModal(index) {
+            currentModalIndex = index;
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalVideo = document.getElementById('modalVideo');
+            const allPhotos = getAllPhotos();
+            const item = allPhotos[index];
+            
+            if (!item) return;
+            
+            if (item.type === 'video') {
+                modalImg.style.display = 'none';
+                modalVideo.style.display = 'block';
+                modalVideo.src = item.src;
+            } else {
+                modalVideo.style.display = 'none';
+                modalImg.style.display = 'block';
+                modalImg.src = item.src;
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(event) {
+            if (event && event.target.tagName === 'IMG') return;
+            
+            const modal = document.getElementById('imageModal');
+            const modalVideo = document.getElementById('modalVideo');
+            modal.classList.remove('active');
+            modalVideo.pause();
+            document.body.style.overflow = '';
+        }
+        
+        function clearGallery() {
+            if (confirm('Удалить все загруженные фото?')) {
+                galleryItems = [];
+                saveGalleryToStorage();
+                renderGallery();
+            }
+        }
+        
+        function saveGalleryToStorage() {
+            try {
+                const data = JSON.stringify(galleryItems);
+                if (new Blob([data]).size > 4 * 1024 * 1024) {
+                    alert('Слишком много фото! Удалите часть.');
+                    return;
+                }
+                localStorage.setItem('klimovo_gallery', data);
+            } catch (e) {
+                console.error('Ошибка сохранения:', e);
+            }
+        }
+        
+        function loadGalleryFromStorage() {
+            try {
+                const stored = localStorage.getItem('klimovo_gallery');
+                if (stored) galleryItems = JSON.parse(stored);
+            } catch (e) {
+                galleryItems = [];
+            }
+        }
+        
+        // ============ АДМИН-РЕЖИМ ============
+        
+        // Тройной клик по "Галерея"
+        let clickCount = 0;
+        let clickTimer = null;
+        
+        document.getElementById('galleryTitle').addEventListener('click', () => {
+            clickCount++;
+            
+            if (clickCount === 3) {
+                toggleAdminMode();
+                clickCount = 0;
+                clearTimeout(clickTimer);
+            }
+            
+            clearTimeout(clickTimer);
+            clickTimer = setTimeout(() => { clickCount = 0; }, 500);
+        });
+        
+        // Ctrl+Shift+U
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.shiftKey && (e.key === 'U' || e.key === 'u' || e.keyCode === 85)) {
+                e.preventDefault();
+                toggleAdminMode();
+            }
+            if (e.key === 'Escape') closeModal();
+        });
+        
+        function toggleAdminMode() {
+            adminMode = !adminMode;
+            const controls = document.getElementById('galleryControls');
+            const indicator = document.getElementById('adminIndicator');
+            
+            if (adminMode) {
+                controls.classList.add('admin-mode');
+                indicator.classList.add('active');
+                alert('🔓 Админ-режим активирован! Теперь можно загружать фото.');
+            } else {
+                controls.classList.remove('admin-mode');
+                indicator.classList.remove('active');
+            }
+        }
+        
+        // ============ ФОРМА ============
+        
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0 && !value.startsWith('7')) value = '7' + value;
+            
+            let formatted = '+7';
+            if (value.length > 1) formatted += ' (' + value.substring(1, 4);
+            if (value.length >= 5) formatted += ') ' + value.substring(4, 7);
+            if (value.length >= 8) formatted += '-' + value.substring(7, 9);
+            if (value.length >= 10) formatted += '-' + value.substring(9, 11);
+            
+            e.target.value = formatted;
+        });
+        
+        const form = document.getElementById('orderForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Заявка:', { 
+                phone: document.getElementById('phone').value,
+                name: document.getElementById('name').value
+            });
+            
+            form.style.display = 'none';
+            successMessage.style.display = 'block';
+            
+            setTimeout(() => {
+                form.style.display = 'block';
+                successMessage.style.display = 'none';
+                form.reset();
+            }, 5000);
+        });
+        
+        // ============ СТАРТ ============
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            loadGalleryFromStorage();
+            renderGallery();
+            typeLogoOnce();
+        });
+    </script>
+</body>
+</html>
