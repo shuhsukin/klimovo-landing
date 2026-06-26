@@ -24,3 +24,10 @@ git push origin main
 ```
 
 Обновление на сайте — обычно 1–2 минуты после push.
+
+## Фото продукции (следующий шаг)
+
+1. Экспорт канала [@KlimovoZ](https://t.me/KlimovoZ) → папка `telegram-export/`
+2. Агент отбирает кадры → `images/products/*.webp` → push
+
+Подробнее: [telegram-export/README.md](telegram-export/README.md)

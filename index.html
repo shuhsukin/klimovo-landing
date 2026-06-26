@@ -197,13 +197,41 @@
 
         .product {
             background: var(--white);
-            padding: 60px 40px;
+            padding: 0 0 60px;
             transition: all 0.3s ease;
+            overflow: hidden;
         }
 
         .product:hover {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: var(--white);
+        }
+
+        .product-image-wrap {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            background: var(--light-grey);
+            overflow: hidden;
+        }
+
+        .product-image-wrap:empty {
+            display: none;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover .product-image {
+            transform: scale(1.03);
+        }
+
+        .product-body {
+            padding: 32px 40px 0;
         }
 
         .product-name {
@@ -692,28 +720,46 @@
             <h2 class="section-title">Продукция</h2>
             <div class="products-grid">
                 <div class="product">
-                    <h3 class="product-name">Молоко</h3>
-                    <p class="product-desc">Очень вкусное, жирность 4,5%</p>
+                    <div class="product-image-wrap"><img class="product-image" src="images/products/milk.webp" alt="Молоко" onerror="this.remove()"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Молоко</h3>
+                        <p class="product-desc">Очень вкусное, жирность 4,5%</p>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3 class="product-name">Сметана</h3>
-                    <p class="product-desc">Как в детстве</p>
+                    <div class="product-image-wrap"><img class="product-image" src="images/products/smetana.webp" alt="Сметана" onerror="this.remove()"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Сметана</h3>
+                        <p class="product-desc">Как в детстве</p>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3 class="product-name">Творог</h3>
-                    <p class="product-desc">Посуше или помягче — на выбор</p>
+                    <div class="product-image-wrap"><img class="product-image" src="images/products/tvorog.webp" alt="Творог" onerror="this.remove()"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Творог</h3>
+                        <p class="product-desc">Посуше или помягче — на выбор</p>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3 class="product-name">Масло</h3>
-                    <p class="product-desc">Отделяется при взбалтывании сливок в банке</p>
+                    <div class="product-image-wrap"><img class="product-image" src="images/products/maslo.webp" alt="Масло" onerror="this.remove()"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Масло</h3>
+                        <p class="product-desc">Отделяется при взбалтывании сливок в банке</p>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3 class="product-name">Сыр</h3>
-                    <p class="product-desc">Как адыгейский, только вкуснее</p>
+                    <div class="product-image-wrap"><img class="product-image" src="images/products/syr.webp" alt="Сыр" onerror="this.remove()"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Сыр</h3>
+                        <p class="product-desc">Как адыгейский, только вкуснее</p>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3 class="product-name">Топлёное масло</h3>
-                    <p class="product-desc">Золотистое, ароматное, по бабушкиному рецепту</p>
+                    <div class="product-image-wrap"><img class="product-image" src="images/products/toplenoe-maslo.webp" alt="Топлёное масло" onerror="this.remove()"></div>
+                    <div class="product-body">
+                        <h3 class="product-name">Топлёное масло</h3>
+                        <p class="product-desc">Золотистое, ароматное, по бабушкиному рецепту</p>
+                    </div>
                 </div>
             </div>
         </div>
