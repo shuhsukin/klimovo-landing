@@ -1,8 +1,0 @@
-name = "klimovo-leads"
-main = "index.js"
-compatibility_date = "2024-01-01"
-
-[vars]
-# Секреты — через wrangler secret put (не коммитить):
-# TELEGRAM_BOT_TOKEN
-# TELEGRAM_CHAT_ID
