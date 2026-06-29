@@ -32,7 +32,6 @@ git push origin main
 
 Подробнее: [telegram-export/README.md](telegram-export/README.md)
 
-## Заявки с формы → Telegram
+## Заявки
 
-Инструкция: [telegram-bot/SETUP.md](telegram-bot/SETUP.md)  
-URL worker прописывается в `js/site-config.js`.
+Кнопка «Написать в Telegram» открывает личку [@zpavel2](https://t.me/zpavel2) с готовым текстом.
