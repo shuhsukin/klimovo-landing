@@ -34,4 +34,4 @@ git push origin main
 
 ## Заявки
 
-Кнопка «Написать в Telegram» открывает личку [@zpavel2](https://t.me/zpavel2) с готовым текстом.
+Кнопка «Написать в Telegram» открывает личку [@zpavel2](https://t.me/zpavel2).
