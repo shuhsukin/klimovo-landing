@@ -31,3 +31,8 @@ git push origin main
 2. Агент отбирает кадры → `images/products/*.webp` → push
 
 Подробнее: [telegram-export/README.md](telegram-export/README.md)
+
+## Заявки с формы → Telegram
+
+Инструкция: [telegram-bot/SETUP.md](telegram-bot/SETUP.md)  
+URL worker прописывается в `js/site-config.js`.
