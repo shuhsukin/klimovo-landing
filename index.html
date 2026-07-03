@@ -226,6 +226,14 @@
             transition: transform 0.3s ease;
         }
 
+        .product-image--milk {
+            object-position: 42% 18%;
+        }
+
+        .product:not(:has(.product-image-wrap)) .product-body {
+            padding: 60px 40px 0;
+        }
+
         .product:hover .product-image {
             transform: scale(1.03);
         }
@@ -732,14 +740,13 @@
             <h2 class="section-title">Продукция</h2>
             <div class="products-grid">
                 <div class="product">
-                    <div class="product-image-wrap"><img class="product-image" src="images/products/milk.webp" alt="Молоко" onerror="this.remove()"></div>
+                    <div class="product-image-wrap"><img class="product-image product-image--milk" src="images/products/milk.webp" alt="Молоко" onerror="this.remove()"></div>
                     <div class="product-body">
                         <h3 class="product-name">Молоко</h3>
                         <p class="product-desc">Очень вкусное, жирность 4,5%</p>
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product-image-wrap"><img class="product-image" src="images/products/smetana.webp" alt="Сметана" onerror="this.remove()"></div>
                     <div class="product-body">
                         <h3 class="product-name">Сметана</h3>
                         <p class="product-desc">Как в детстве</p>
@@ -753,7 +760,6 @@
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product-image-wrap"><img class="product-image" src="images/products/maslo.webp" alt="Масло" onerror="this.remove()"></div>
                     <div class="product-body">
                         <h3 class="product-name">Масло</h3>
                         <p class="product-desc">Отделяется при взбалтывании сливок в банке</p>
@@ -767,7 +773,6 @@
                     </div>
                 </div>
                 <div class="product">
-                    <div class="product-image-wrap"><img class="product-image" src="images/products/toplenoe-maslo.webp" alt="Топлёное масло" onerror="this.remove()"></div>
                     <div class="product-body">
                         <h3 class="product-name">Топлёное масло</h3>
                         <p class="product-desc">Золотистое, ароматное, по бабушкиному рецепту</p>
