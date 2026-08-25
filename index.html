@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Климово · Дары Старицы - ферма, день в деревне, продукты</title>
-  <meta name="description" content="Мини-ферма в деревне Климово, Старицкий район. День деревенской жизни, гостевой дом и изба, молочная продукция «Дары Старицы».">
+  <meta name="description" content="Ферма Климово у Старицы: день на настоящей ферме с детьми, тихий выходной вдвоём и продукция «Дары Старицы».">
   <meta property="og:title" content="Климово · Дары Старицы">
-  <meta property="og:description" content="Стать деревенским на один день. Настоящая ферма у Старицы: животные, баня, продукты с собой.">
+  <meta property="og:description" content="День на настоящей ферме с детьми: живые коровы, понятный сценарий и молоко с собой домой.">
   <meta property="og:image" content="images/wfolio-2026-08-15/img_6288.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -288,6 +288,50 @@
       font-size: 1.45rem; font-weight: 600;
     }
     .audience-side p { color: var(--muted); font-size: .92rem; }
+
+    .criteria {
+      list-style: none;
+      display: grid;
+      gap: .7rem;
+      margin: 0 0 1.6rem;
+    }
+    .criteria li {
+      display: grid;
+      grid-template-columns: 1.4rem 1fr;
+      gap: .7rem;
+      align-items: start;
+      font-size: .98rem;
+      color: var(--ink);
+    }
+    .criteria li::before {
+      content: "";
+      width: 10px; height: 10px; margin-top: .45rem;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+    .segment-nav {
+      display: flex; flex-wrap: wrap; gap: .55rem;
+      margin-top: 1.4rem;
+    }
+    .segment-nav a {
+      text-decoration: none;
+      padding: .45rem .9rem;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid rgba(44,40,36,.1);
+      font-size: .82rem; font-weight: 700;
+      color: var(--sage-deep);
+    }
+    .segment-nav a:hover { border-color: var(--sage); }
+    .vs-box {
+      margin: 1.2rem 0 1.5rem;
+      padding: 1.15rem 1.25rem;
+      border-radius: 14px;
+      background: var(--cream-soft);
+      border-left: 3px solid var(--blush);
+    }
+    .vs-box strong { display: block; margin-bottom: .35rem; font-size: .95rem; }
+    .vs-box p { color: var(--muted); font-size: .92rem; margin: 0; }
 
     /* —— Day —— */
     .day-layout {
@@ -668,8 +712,8 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#day">День на ферме</a></li>
-        <li><a href="#stay">Проживание</a></li>
+        <li><a href="#families">Семьям</a></li>
+        <li><a href="#quiet">Вдвоём</a></li>
         <li><a href="#products">Продукты</a></li>
         <li><a href="#gallery">Галерея</a></li>
         <li><a href="#route">Как добраться</a></li>
@@ -691,49 +735,54 @@
             <div class="tag">Ручной труд с любовью</div>
           </div>
         </div>
-        <h1>Стать деревенским на один день</h1>
+        <h1>День на настоящей ферме с детьми</h1>
         <p class="hero-lead">
-          Живая мини-ферма в Климово у Старицы: подоить корову, покормить животных,
-          погреться у печи и увезти домой настоящее молоко.
+          Живые коровы и овцы у Старицы, понятный сценарий на 4–8 часов
+          и молоко с собой домой - не контактный парк и не база «для галочки».
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://t.me/KlimovoZ" target="_blank" rel="noopener">Записаться в Telegram</a>
-          <a class="btn btn-ghost" href="#products">Смотреть продукты</a>
+          <a class="btn btn-ghost" href="#families">Как проходит день</a>
         </div>
       </div>
     </section>
 
-    <section class="for-whom" id="for">
+    <section class="for-whom" id="recognize">
       <div class="wrap reveal">
-        <p class="eyebrow">Кому это</p>
-        <h2 class="section-title">Три простых входа</h2>
+        <p class="eyebrow">Узнаёте себя</p>
+        <h2 class="section-title">Если дети просят «к животным»</h2>
         <p class="section-lead">
-          Главный оффер - семейный день на настоящей ферме. Рядом - ночёвка и продукты без визита.
+          Вы уже ездили в контактный зоопарк или на «ферму» у города и хотели в следующий раз меньше аттракциона и больше настоящей жизни - как у бабушки, только аккуратно.
         </p>
         <div class="audience-grid">
           <article class="audience-main">
-            <h3>Семьи с детьми</h3>
-            <p>Живые коровы и овцы, понятный сценарий на день, еда с собой - без парка-аттракциона.</p>
+            <h3>Семьи с детьми 4–12</h3>
+            <p>Дать детям живой опыт еды и природы - и уехать с ощущением, что выходной получился.</p>
           </article>
           <article class="audience-side">
             <div>
-              <h3>Выходные вдвоём</h3>
-              <p>Гостевой дом, баня с чаном, травяной чай и тишина без сотовой связи.</p>
+              <h3>Нужна тишина вдвоём?</h3>
+              <p>Другой посыл: ночёвка, баня, чай и почти без связи.</p>
             </div>
-            <a class="btn btn-line" href="#stay">Про проживание</a>
+            <a class="btn btn-line" href="#quiet">К этому блоку</a>
           </article>
           <article class="audience-side">
             <div>
-              <h3>Продукты домой</h3>
-              <p>Молоко, творог, сметана, сыр и мёд - с фермы и с ярмарок.</p>
+              <h3>Нужно только молоко?</h3>
+              <p>Другой посыл: регулярная продукция «Дары Старицы» без визита.</p>
             </div>
-            <a class="btn btn-line" href="#products">К продукции</a>
+            <a class="btn btn-line" href="#products">К продуктам</a>
           </article>
+        </div>
+        <div class="segment-nav">
+          <a href="#families">Семьям с детьми</a>
+          <a href="#quiet">Вдвоём на выходные</a>
+          <a href="#products">Продукция домой</a>
         </div>
       </div>
     </section>
 
-    <section id="day">
+    <section id="families">
       <div class="wrap">
         <div class="day-layout">
           <figure class="day-visual reveal">
@@ -741,58 +790,71 @@
             <figcaption>Климово · живая ферма, не декорация</figcaption>
           </figure>
           <div class="reveal">
-            <p class="eyebrow">Агротуризм</p>
-            <h2 class="section-title">Что можно попробовать</h2>
+            <p class="eyebrow">Для семей с детьми</p>
+            <h2 class="section-title">Что для вас значит «хороший день»</h2>
             <p class="section-lead">
-              Зависит от сезона и погоды. Собираем программу под вас: с детьми, вдвоём или «поработать руками».
+              Не «развлечения на любой вкус», а конкретный результат выходного.
             </p>
+            <ul class="criteria">
+              <li>Дети заняты делом 2–3 часа: кормят животных, смотрят, откуда молоко</li>
+              <li>Безопасно и без ощущения, что вы мешаете хозяевам</li>
+              <li>Есть что рассказать и сфотографировать - не пустые декорации</li>
+              <li>Увозите настоящую еду с фермы</li>
+              <li>Цена как у хорошего семейного дня, без курортного глянца</li>
+            </ul>
+            <div class="vs-box">
+              <strong>Почему не парк у МКАД</strong>
+              <p>Там часто аттракцион. Здесь рабочие коровы, хозяева на месте и продукция, которую можно взять с собой - чтобы поездка имела смысл и после дороги домой.</p>
+            </div>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;margin:0 0 .8rem;">Как проходит день</h3>
             <ul class="activity-list">
-              <li>Подоить корову и забрать молоко</li>
+              <li>Познакомиться с фермой и животными</li>
               <li>Покормить коров, овец, свиней, кур, лошадей</li>
+              <li>Подоить корову и забрать молоко</li>
               <li>Покататься на пони или лошади</li>
-              <li>Баня по-чёрному и чан с родниковой водой</li>
-              <li>Растопить русскую печь, погреться на лежанке</li>
-              <li>Научиться делать творог, сметану, масло, сыр</li>
-              <li>Травяной чай: иван-чай, липа, таволга</li>
-              <li>Шашлык, картошка с огурцом и капустой</li>
-              <li>Волейбол, пионербол, бадминтон</li>
-              <li>Грибы и ягоды по сезону</li>
-              <li>Металлоискатель и находки времён ВОВ</li>
-              <li>Охота - при наличии разрешения</li>
+              <li>Посмотреть, как делают творог, сметану, масло, сыр</li>
+              <li>Травяной чай, простой обед / шашлык по договорённости</li>
+              <li>Игры во дворе: волейбол, пионербол, бадминтон</li>
+              <li>По сезону: грибы, ягоды, сад и огород</li>
             </ul>
             <div class="complex-box">
-              <h3>Комплекс «Стать деревенским»</h3>
+              <h3>Хотите руками, не только смотреть</h3>
               <p>
-                Один день руками: прибить доску, убрать навоз, накормить животных,
-                наколоть дров, растопить печь, посадить дерево или собрать урожай.
-                Понять, надо ли оно вам - на деле, не на картинках.
+                Можно собрать день «как в деревне»: накормить животных, наколоть дров,
+                растопить печь, посадить дерево или собрать урожай. Детям - отдых от гаджетов на деле.
               </p>
             </div>
             <div class="note">
-              По опыту гостевых ферм рядом гости чаще всего просят короткую экскурсию по ферме,
-              прогулку по полям и болоту, и простой труд для детей. Мы собираем день из того, что реально есть сейчас.
+              Программу собираем под ваш состав и сезон. Сотовой связи почти нет - это часть тишины, не сбой.
             </div>
-            <a class="btn btn-dark" href="https://t.me/KlimovoZ" target="_blank" rel="noopener">Обсудить даты в Telegram</a>
+            <a class="btn btn-dark" href="https://t.me/KlimovoZ" target="_blank" rel="noopener">Написать даты и возраст детей</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stay" id="stay">
+    <section class="stay" id="quiet">
       <div class="wrap reveal">
-        <p class="eyebrow">Проживание</p>
-        <h2 class="section-title">Остаться на ночь</h2>
+        <p class="eyebrow">Для тех, кто едет без детей или оставил их бабушке</p>
+        <h2 class="section-title">Тихий выходной в настоящей деревне</h2>
         <p class="section-lead">
-          Гостевой домик со всеми удобствами - или старая изба с русской печью, если хочется почувствовать деревню целиком.
+          Если город вымотал и нужен 1–2 дня без шума: чистый дом или изба, баня, чай и воздух -
+          с минимумом чужих правил и без обязательной «анимации».
         </p>
+        <ul class="criteria" style="max-width:40rem;margin-bottom:1.8rem;">
+          <li>Тишина и звёзды - сотовой связи почти нет</li>
+          <li>Баня с вениками и чан с родниковой водой</li>
+          <li>Самовар и травяной чай, собранный вручную</li>
+          <li>Можно совместить с лёгким утром на ферме и корзиной продуктов на уезд</li>
+        </ul>
         <div class="stay-grid">
           <article class="stay-item">
             <img src="images/wfolio-2026-08-15/img_6302.webp" alt="Сруб и строительство в Климово">
             <div class="stay-item-body">
               <h3>Гостевой дом</h3>
               <p>
-                Две комнаты и кухня-гостиная. Баня с вениками, чан с родниковой водой,
-                самовар и травяной чай. Для тех, кто хочет комфорт рядом с фермой.
+                Две комнаты и кухня-гостиная со всеми удобствами. Баня, чан, травяной чай.
+                Рядом ферма - если захотите зайти к животным, а не только отлежаться.
               </p>
               <div class="chip-row">
                 <span class="chip">2 комнаты</span>
@@ -806,8 +868,8 @@
             <div class="stay-item-body">
               <h3>Старая изба</h3>
               <p>
-                Не все удобства города - зато русская печь, которую нужно топить,
-                и ощущение жизни предков. Можно совместить с днём на ферме и корзиной продуктов.
+                Меньше городского комфорта - зато русская печь, которую топите сами,
+                и ощущение жизни предков. Для тех, кому важнее подлинность, чем глянец.
               </p>
               <div class="chip-row">
                 <span class="chip">Русская печь</span>
@@ -817,6 +879,9 @@
             </div>
           </article>
         </div>
+        <div style="margin-top:1.5rem;">
+          <a class="btn btn-dark" href="https://t.me/KlimovoZ" target="_blank" rel="noopener">Спросить свободные даты</a>
+        </div>
       </div>
     </section>
 
@@ -824,10 +889,11 @@
       <div class="wrap reveal">
         <div class="products-head">
           <div>
-            <p class="eyebrow">Дары Старицы</p>
-            <h2 class="section-title">Продукция с фермы</h2>
+            <p class="eyebrow">Для тех, кто хочет еду, а не поездку</p>
+            <h2 class="section-title">Регулярное молоко и крафт с фермы</h2>
             <p class="section-lead">
-              Ручной труд с любовью. Можно забрать после визита или заказать отдельно - в том числе на ярмарках.
+              Если задача простая - получать деревенское молоко, творог и сыр без визита:
+              заказывайте в канале или ищите нас на ярмарках под маркой «Дары Старицы».
             </p>
           </div>
           <div class="badges" aria-label="Знаки качества">
@@ -956,10 +1022,10 @@
     <section class="cta" id="book">
       <div class="cta-bg" aria-hidden="true"></div>
       <div class="wrap">
-        <h2>Приезжайте попробовать деревню</h2>
+        <h2>Приезжайте, когда дети просят «к животным»</h2>
         <p>
-          Напишите даты и состав семьи - соберём день на ферме, ночёвку или корзину продуктов.
-          Без суеты и лишних обещаний.
+          Напишите возраст детей и удобные даты - соберём день на ферме.
+          Если едете вдвоём или нужны только продукты - тоже напишите, подскажем свой сценарий.
         </p>
         <div class="cta-actions">
           <a class="btn btn-primary" href="https://t.me/KlimovoZ" target="_blank" rel="noopener">Канал @KlimovoZ</a>
